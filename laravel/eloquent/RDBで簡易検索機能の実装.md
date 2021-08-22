@@ -21,7 +21,7 @@ return $query->get();
 - `Model::query`でEloquentビルダー(`Illuminate\Database\Eloquent\Builder`)を取得する
 - フォームに何も入っていない状態は、nullまたは空文字列かどうかで判定
   - 初期値をnullにしているが、フォームに入力してから空にすると空文字列になったため
-- 文字列の中の変数展開は`"{変数}"`で出来る
+- 文字列の中の変数展開は`"{変数}"`で出来る
 
 ## 参考
 
