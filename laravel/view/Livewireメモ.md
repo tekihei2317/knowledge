@@ -24,3 +24,6 @@
   - Livewireのコンポーネントに直接マウントしてパラメータを渡せるみたい
   - コントローラーみたいに使えるよって書いてありますね
     - [Rendering Components | Laravel Livewire](https://laravel-livewire.com/docs/2.x/rendering-components#page-components)
+- コントローラーを直接マウントして気になること
+  - 同名のpublic変数にルートパラメータが注入される
+  - 普通のコンポーネントを使う場合もそうなので、これば別に良さそう
