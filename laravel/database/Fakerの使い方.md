@@ -20,3 +20,4 @@ echo $faker->randomElements(['a', 'b', 'c', 'd', 'e'], 3);
 ## 参考
 
 - [FakerPHP / Faker](https://fakerphp.github.io/)
+- [LaravelのFakerを日本語化する - Qiita](https://qiita.com/kazuhei/items/5d33eedb9ebdd62e0bfb)
