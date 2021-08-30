@@ -21,3 +21,6 @@ protected function retrieveItem($source, $key, $default)
     return $this->$source->get($key, $default);
 }
 ```
+
+- php://stdoutとphp://outputの違い
+  - [php - does echo equal fputs( STDout )? - Stack Overflow](https://stackoverflow.com/questions/7027902/does-echo-equal-fputs-stdout)
