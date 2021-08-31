@@ -24,3 +24,7 @@ protected function retrieveItem($source, $key, $default)
 
 - php://stdoutとphp://outputの違い
   - [php - does echo equal fputs( STDout )? - Stack Overflow](https://stackoverflow.com/questions/7027902/does-echo-equal-fputs-stdout)
+- Eloquentのfirstメソッド（最初の1件を取得）がどこに実装されているかが分からない
+- Requestのqueryメソッドがどこから取得しているかが分からない
+  - InteractsWithInputトレイトに実装があるみたい
+  - $queryというプロパティにアクセスしているように見えるけど、それがRequestクラスになさそう
