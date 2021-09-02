@@ -24,4 +24,15 @@
   - これは何? APIとはまた別の何か?
 - 何をやるにしても、アクセストークンが必要そう
 
+## リンク
+
+Weibo 開発者ページ
+
+- [新浪微博开放平台-首页](https://open.weibo.com/index.php)
+
+Weibo
+
+- [微博-随时随地发现新鲜事](https://weibo.com/login.php)
+- [微博日本站 - 随时随地发现新鲜事](https://jp.weibo.com/)
+
 ## 参考
