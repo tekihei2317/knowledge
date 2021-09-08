@@ -18,6 +18,13 @@
 - ISUCON
   - パフォーマンスの計測方法
 
+## memo
+
+- モデルのプロパティをtrue/falseで取得したい
+  - nullはnull、0をfalse、1をtrueで取得したい
+  - $castsで指定すれば良さそう
+- systemctlのlist-unitsとlist-unit-filesの違い
+
 ## 疑問点
 
 - プロパティ名に変数が使えるのかな?
