@@ -24,6 +24,8 @@
   - nullはnull、0をfalse、1をtrueで取得したい
   - $castsで指定すれば良さそう
 - systemctlのlist-unitsとlist-unit-filesの違い
+- ブラウザの仕組み、JSのフレームワーク(React/Vue)がそれらをどのように扱っているか
+  - 生のJSでイベントを扱おうとすると全然分からなかった
 
 ## 疑問点
 
