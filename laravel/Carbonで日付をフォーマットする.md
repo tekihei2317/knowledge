@@ -12,7 +12,7 @@ Carbon::now()->toDateTimeString();
 // "2021-08-27 03:03:36"
 ```
 
-Carbonを使うのが良さそう。Carbonのformatメソッドを使う。Carbonのformatメソッドは、PHPのDateTime::format()と同じ形式が使えるみたい。こういう日付の形式はどの言語でも共通する定義みたいなのがあるのでしょうか。
+Carbonのformatメソッドを使う。Carbonのformatメソッドは、PHPのDateTime::format()と同じ形式が使えるみたい。こういう日付の形式はどの言語でも共通する定義みたいなのがあるのでしょうか。
 
 ドキュメントから推測するに、年、月、日付、時間、分、秒はそれぞれYmdHisを使えば良さそうだった。
 
