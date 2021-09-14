@@ -66,3 +66,6 @@ $this->routes(function () {
 ```
 
 ## 参考
+
+- [laravelでrouteにdomainを指定した場合のfeatureテスト方法 - もがき系プログラマの日常](https://kojirooooocks.hatenablog.com/entry/2019/08/03/033209)
+  - Route::groupでドメインを指定できるみたい。こっちのほうが簡単そう。
