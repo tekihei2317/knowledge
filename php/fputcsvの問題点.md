@@ -67,3 +67,7 @@ fclose($stream);
 
 - [【PHP】csvを自前で作った話 | ダブルコーテーション問題でfputcsvは使わず実装 - Qiita](https://qiita.com/non0311/items/b812aff80213f627d36b)
 - [【PHP】CSV出力で値をダブルクォーテーションで囲う - suzu6の技術ブログ](https://www.suzu6.net/posts/207-php-csv-with-double-quotation/)
+
+## メモ
+
+`SplFileObject`を使うと良いみたいです。
