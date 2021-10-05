@@ -35,6 +35,63 @@ DSLに対するテストは書かなくてもよいという意見もありま�
 
 とあります。テストの各exampleは独立させるという考え方があるので、それに従うとbefore(:each)を使ったほうが良いです。なぜテストの各exampleを独立させるべきかというと、1番の理由は依存があると前のテストケースの影響を受けてしまうからです（本書の汚染はこの意味）。やったことがないので分かりませんが、テストを並列実行しやすいというのもあるかもしれません。
 
+## 4章 FactoryBotを用いたテストデータの作成
+
+### ファクトリの重複を減らすための方法（継承とトレイト）
+
+```ruby
+# 継承を使った場合
+FactoryBot.define do
+  factory :project do
+    sequence(:name) { |n| "Project #{n}" }
+    description "A test project"
+    due_on { 1.week.from_now }
+    owner { association :user }
+
+    factory :project_due_today do
+      due_on { Time.current }
+    end
+  end
+end
+
+FactoryBot.create(:project_due_today)
+
+# トレイトを使った場合
+FactoryBot.define do
+  factory :project do
+    sequence(:name) { |n| "Project #{n}" }
+    description "A test project"
+    due_on { 1.week.from_now }
+    owner { association :user }
+
+    trait :due_today do
+      due_on { Time.current }
+    end
+  end
+end
+
+FactoryBot.create(:project, :due_today)
+```
+
+この例であれば、FactoryBotの継承とトレイトの違いは、ファクトリを生成するときの指定方法くらい。トレイトは複数指定できて柔軟なので、基本的にはトレイトを使うのが良いと思う。他にも便利な機能があるので（transientとか）、ファクトリの定義で困った場合はFactoryBotのドキュメントを読む。
+
+## 7章 リクエストスペックを用いたAPIのテスト
+
+## 8章 スペックをDRYに保つ
+
+サポートモジュール
+  共通する処理をモジュールに切り出す
+
+shared_context
+  テストのセットアップ（letやbefore）を共通化する
+
+カスタムマッチャ
+  独自のマッチャを定義する
+
+aggregate_failures
+  エクスペクテーションが失敗した場合も複数実行できるようにする
+
 ## 参考
 
 - [Rails 開発で意識していること 1 · ryym.log](https://ryym.tokyo/posts/my-rails-practice1/)
+- [Factory Bot Documentation](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md)
