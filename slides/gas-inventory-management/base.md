@@ -6,13 +6,15 @@ footer: by ＠tekihei2317
 
 # GASで在庫管理をサクッと実装した話
 
+![bg contain](images/inventory.png)
+
 ---
 
 ## 目次
 
 1. ある日のこと
 2. Google App Script（GAS）とはなにか
-3. 先入れ先出し法について
+3. 先入先出法について
 4. 作ったプログラム
 5. claspでローカルでGASを書く
 6. まとめ
@@ -22,13 +24,13 @@ footer: by ＠tekihei2317
 ## ある日のこと
 
 上長「在庫管理したいんだけど、スプレッドシートでこれ出来る？」
-上長「先入れ先出し法っていうのがあって...」
+上長「先入先出法っていうのがあって...」
 ぼく「なるほど...」
 
 ~~ 30分後 ~~
 
 ぼく「スプレッドシートだと難しいと思います！」
-ぼく「これはプログラムを書きたくなるやつですね」
+ぼく「プログラムを書きたくなるやつですね」
 
 ---
 
@@ -46,6 +48,22 @@ footer: by ＠tekihei2317
 
 ## できたもの
 
+![bg](images/demo.gif)
+
+---
+
+## 先入先出法とは
+
+先に仕入れた商品から先に販売したと仮定して、棚卸資産（在庫の価値）を計算する方法。
+
+例)
+りんごを300円×30個、500円×20個、400円×40個の順に仕入れる
+
+棚卸資産は、
+
+20個販売したとき 300×10+500×20+400×40 = 29000円
+40個販売したとき 500×10+400×40 = 21000円
+
 ---
 
 ## Google App Script（GAS）とは
@@ -55,10 +73,6 @@ footer: by ＠tekihei2317
 
 - JavaScriptで書ける！
   - 処理系がChromeと同じV8エンジン
-
----
-
-## 先入れ先出し法について
 
 ---
 
@@ -84,10 +98,23 @@ const makeStocks = (lastRowIndex) => {
 
 ## 作ったプログラム（計算）
 
-ちょっと長いので省略
+在庫と引き出した個数の累計から、引き出した在庫の価値を求める
 
-```javascript
-// TODO:
+```bash
+> const stocks = [
+...   { price: 300, count: 3 },
+...   { price: 500, count: 2 },
+...   { price: 400, count: 3 },
+... ];
+> const consumedCounts = [0, 0, 0, 2, 4, 5, 8];
+> let calcConsumedPriceSum;
+> import("./src/lib/calcConsumedPriceSum.js").then((module) => calcConsumedPriceSum = module.default);
+> calcConsumedPriceSum(stocks, consumedCounts);
+[
+     0,    0,    0,
+   600, 1400, 1900,
+  3100
+]
 ```
 
 ---
@@ -99,7 +126,6 @@ const makeStocks = (lastRowIndex) => {
 ```javascript
 const setPriceSum = (priceSumList) => {
   priceSumList.forEach((priceSum, index) => {
-    // 開始行は固定値なので、その次の行から埋める
     sheet.getRange(OFFSET_ROW + 1 + index, CONSUMED_COUNT_COL + 1).setValue(priceSum);
   });
 }
@@ -112,12 +138,12 @@ const setPriceSum = (priceSumList) => {
 セルを変更したときに計算を実行する
 
 ```javascript
-// TODO: onEditにする
-const main = () => {
+const onEdit = () => {
   const lastRowIndex = calcLastRowIndex();
   const stocks = makeStocks(lastRowIndex);
-  const priceSumList = calcCounsumedPriceSum(stocks, lastRowIndex);
+  const priceSumList = calcResult(stocks, lastRowIndex);
   setPriceSum(priceSumList);
+  clearPriceSum(priceSumList.length);
 };
 ```
 
@@ -125,14 +151,17 @@ const main = () => {
 
 ## claspでローカルでGASを書く
 
-今回のリポジトリ: TODO:
+- claspを使うと、スクリプトをローカルで書いてpush/pullできる
+- clasp pushが少し時間がかかる
+
+今回のリポジトリ
+[https://github.com/tekihei2317/gas-inventory-management](https://github.com/tekihei2317/gas-inventory-management)
 
 ---
 
 ## まとめ
 
-- GASはJSで書けるのでとても便利
-- めんどくさいことがあれば自動化するのでまかせてください！！
+- GASはJSで書けるので便利！
 
 ---
 
