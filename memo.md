@@ -51,3 +51,4 @@ protected function retrieveItem($source, $key, $default)
 - Requestのqueryメソッドがどこから取得しているかが分からない
   - InteractsWithInputトレイトに実装があるみたい
   - $queryというプロパティにアクセスしているように見えるけど、それがRequestクラスになさそう
+- Content Security Policyとは
