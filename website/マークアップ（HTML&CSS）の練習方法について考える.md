@@ -27,7 +27,7 @@ HTML & CSSを使いこなしている人は、以下のようなことをして�
 
 ### [Codewell](https://www.codewell.cc/)
 
-デザインのテンプレートをマークアップして練習ができる。デザインの画像をもとに作っていく形式で、有料プランはFigmaのテンプレートが使える。単純な理由だが、作るサイトのデザインがかっこいいのでやりたくなる。解説があるかどうかは未確認だが、Slackのコミュニティがあるみたいなので、そこで議論とかがされている気がする。
+デザインのテンプレートをマークアップして練習ができる。デザインの画像をもとに作っていく形式で、有料プランはFigmaのテンプレートが使える。単純な理由だが、作るサイトのデザインがかっこいいのでやりたくなる。解説があるかどうかは未確認だが、Slackのコミュニティがあるみたいなので、そこで議論とかがされている気がする。似たようなものに[Frontend Mentor](https://www.frontendmentor.io/)がある。
 
 ### [Inovatik](https://inovatik.com/)
 
@@ -41,3 +41,4 @@ TODO:
 
 - [デザインカンプからのHTML/CSSコーディングの練習になる学習サイト | Webクリエイターボックス](https://www.webcreatorbox.com/tech/coding-practice)
 - [商用でも完全無料、ランディングページ用のHTMLテンプレートがダウンロードできる -Inovatik | コリス](https://coliss.com/articles/build-websites/operation/work/free-html-templates-for-landing-pages-inovatik.html)
+- [Front-End Challenges | CSS-Tricks](https://css-tricks.com/front-end-challenges/)

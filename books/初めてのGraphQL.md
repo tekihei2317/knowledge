@@ -28,6 +28,4 @@ User {
 postedPhotos: (parent) => photos.filter((photo) => photo.userId === parent.id)
 ```
 
-こんな感じで書く? これだとユーザー一覧の取得でN+1問題が起きる。
-
-続き: P107~
+こんな感じで書く。 これだとユーザー一覧の取得でN+1問題が起きる（毎回写真一覧をループしているため）。
