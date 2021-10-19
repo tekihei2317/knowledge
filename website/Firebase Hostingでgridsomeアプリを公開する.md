@@ -81,3 +81,4 @@ jobs:
 - [Firebase Hosting](https://firebase.google.com/docs/hosting/?authuser=0#implementation_path)
 - [Firebase公式のGitHubとHostingのインテグレーションが熱い🔥](https://zenn.dev/watarukun/articles/8f3e318bacf97cabf879)
 - [WordPressで記事を投稿したらGitHub Actions経由でGridsomeのビルドをする。 - return $lock;](https://retrorocket.biz/archives/1606)
+- [GitHubActionsのrepository_dispatchを使い特定ブランチでWorkflowを実行する - notebook](https://swfz.hatenablog.com/entry/2020/01/23/080000)
