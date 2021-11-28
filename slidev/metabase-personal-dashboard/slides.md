@@ -67,7 +67,14 @@ services:
 
 睡眠時間と歩数を可視化するもの（https://github.com/tekihei2317/personal-dashboard）
 
-![](https://i.gyazo.com/f3877f2e246bef20be6a1bd9ec9058a5.png)
+<img src="https://i.gyazo.com/f3877f2e246bef20be6a1bd9ec9058a5.png"/>
+
+<style>
+img {
+  max-height: 80%;
+}
+</style>
+
 
 ---
 
@@ -78,15 +85,19 @@ services:
 - DBに問い合わせるクエリと、それを可視化したグラフのペア
 - クエリはGUIで作成するか、エディターでSQLを直接書くことも出来る
 
-<div grid="~ cols-2 gap-4" m="t-4">
+<div class="grid grid-cols-2 gap-4" m="t-4">
+  <div>GUI</div>
+  <div>SQL</div>
 
-<div>GUI</div>
-<div>SQL</div>
-
-<div><img src="https://i.gyazo.com/ae0cee6864dfc4ee267c27331f05e425.png" /></div>
-<div><img src="https://i.gyazo.com/e428ec5a1b1d3dab587cacdbea56531a.png" /></div>
-
+  <img src="https://i.gyazo.com/ae0cee6864dfc4ee267c27331f05e425.png" class="h-full" />
+  <img src="https://i.gyazo.com/e428ec5a1b1d3dab587cacdbea56531a.png" />
 </div>
+
+<style>
+img {
+  height: 280px;
+}
+</style>
 
 ---
 

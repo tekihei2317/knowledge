@@ -10,5 +10,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },
-  "name": "metabase-personal-dashboard"
+  "name": "metabase-personal-dashboard",
+  "devDependencies": {
+    "playwright-chromium": "^1.16.3"
+  }
 }
